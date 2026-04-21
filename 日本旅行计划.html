@@ -15,10 +15,7 @@
         
         body {
             font-family: "M PLUS Rounded 1c", "Microsoft YaHei", Arial, sans-serif;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(144, 238, 144, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.3) 0%, transparent 50%),
-                linear-gradient(180deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+            background: #f5f5f5;
             min-height: 100vh;
             padding: 20px;
             color: #2e7d32;
@@ -28,7 +25,7 @@
             max-width: 1000px;
             margin: 0 auto;
             background: linear-gradient(135deg, #ffffff 0%, #f1f8e9 100%);
-            padding: 0;
+            padding: 20px 0 0;
             border-radius: 30px;
             box-shadow: 
                 0 20px 60px rgba(46, 125, 50, 0.15),
@@ -40,76 +37,50 @@
         
         .header {
             background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
-            padding: 50px 30px 60px;
+            padding: 10px 15px 15px;
             text-align: center;
             position: relative;
             overflow: visible;
+            border-radius: 20px 20px 0 0;
         }
         
-        .header::before {
-            content: "🌿";
-            position: absolute;
-            font-size: 40px;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.15;
-        }
-        
-        .header::after {
-            content: "🍃";
-            position: absolute;
-            font-size: 40px;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.15;
-        }
+
         
         h1 {
             color: white;
-            font-size: 36px;
-            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+            font-size: 28px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
             position: relative;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         
         h1::before {
-            content: "🧸";
-            margin-right: 15px;
+            content: "";
+            margin-right: 0;
         }
         
         h1::after {
-            content: "🐰";
-            margin-left: 15px;
+            content: "";
+            margin-left: 0;
         }
         
         .date-badge {
             display: inline-block;
             background: white;
             color: #43a047;
-            padding: 8px 25px;
+            padding: 5px 18px;
             border-radius: 20px;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
-        .mascots {
-            margin-top: 25px;
-            font-size: 35px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background: rgba(255,255,255,0.2);
-            padding: 10px;
-            border-radius: 20px;
-        }
+
         
         .tabs {
             display: flex;
-            padding: 30px 20px 10px;
+            padding: 15px 20px 10px;
             gap: 10px;
             flex-wrap: wrap;
             justify-content: center;
@@ -248,19 +219,6 @@
             color: #388e3c;
         }
         
-        .spot-icon {
-            font-size: 60px;
-            display: block;
-            text-align: center;
-            margin: 20px 0;
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
         .footer {
             text-align: center;
             padding: 20px;
@@ -272,7 +230,6 @@
             h1 { font-size: 24px; }
             .tab-button { padding: 12px 20px; font-size: 14px; }
             .time-slot { padding: 15px; }
-            .mascots { font-size: 30px; padding: 8px 20px; }
         }
     </style>
 </head>
@@ -280,10 +237,8 @@
     <div class="container">
         <div class="header">
             <h1>日本旅行计划</h1>
-            <div class="date-badge">2026年5月1日 - 5月5日 🌸</div>
-            <div class="mascots">
-                🧸 🎋 🐰 🌊 🏔️
-            </div>
+            <div class="date-badge">2026年5月1日 - 5月5日</div>
+
         </div>
         
         <div class="tabs">
@@ -297,7 +252,6 @@
         <div id="day1" class="tab-content active">
             <h2 class="day-title"><span class="day-icon">🏯</span> 第1天 - 5月1日：京都三大寺院巡礼</h2>
             
-            <span class="spot-icon">🏯⛩️🎋</span>
             
             <div class="time-slot">
                 <strong>上午5:45</strong> - ✈️ 抵达关西机场(KIX)
@@ -339,41 +293,35 @@
         <div id="day2" class="tab-content">
             <h2 class="day-title"><span class="day-icon">🎋</span> 第2天 - 5月2日：岚山深度游</h2>
             
-            <span class="spot-icon">🧸🎋🏯</span>
             
             <div class="time-slot">
                 <strong>上午9:20</strong> - <span class="transport">🚃 酒店步行至京都站→JR嵯峨野线→岚山站</span> - 约25分钟，240日元
             </div>
             
             <div class="time-slot">
-                <strong>上午10:00-12:00</strong> - 🧸 轻松熊茶屋 - Rilakkuma主题咖啡&商店
+                <strong>上午10:00-12:00</strong> - 🧸 轻松熊茶屋 - Rilakkuma主题咖啡&商店（含午餐）
             </div>
             
             <div class="time-slot">
-                <strong>中午12:00-1:00</strong> - 🍜 午餐
+                <strong>下午12:30-2:00</strong> - 🏯 佑斋亭 - 池泉回游式庭园（需预约）
             </div>
             
             <div class="time-slot">
-                <strong>下午1:00-2:30</strong> - 🏯 佑斋亭 - 池泉回游式庭园（需预约）
+                <strong>下午2:00-3:30</strong> - 🎋 竹林小径漫步
             </div>
             
             <div class="time-slot">
-                <strong>下午2:30-4:00</strong> - 🎋 竹林小径漫步
+                <strong>下午3:30-5:00</strong> - 🛍️ 岚山商业街购物
             </div>
             
             <div class="time-slot">
-                <strong>下午4:00-5:30</strong> - 🛍️ 岚山商业街购物
-            </div>
-            
-            <div class="time-slot">
-                <strong>下午5:30-7:30</strong> - <span class="transport">🚃 返回京都</span>
+                <strong>下午5:00-7:00</strong> - <span class="transport">🚃 返回京都</span>
             </div>
         </div>
 
         <div id="day3" class="tab-content">
             <h2 class="day-title"><span class="day-icon">🏔️</span> 第3天 - 5月3日：京都→伊东半岛</h2>
             
-            <span class="spot-icon">🚄🌊🏔️</span>
             
             <div class="time-slot">
                 <strong>上午11:00</strong> - <span class="transport">🚄 新干线京都→热海</span> - 约2小时，11,500日元
@@ -407,7 +355,6 @@
         <div id="day4" class="tab-content">
             <h2 class="day-title"><span class="day-icon">🌊</span> 第4天 - 5月4日：城崎海岸→东京</h2>
             
-            <span class="spot-icon">🌊🏨🍖📸</span>
             
             <div class="time-slot">
                 <strong>上午10:00</strong> - 🏨 酒店退房
@@ -449,7 +396,6 @@
         <div id="day5" class="tab-content">
             <h2 class="day-title"><span class="day-icon">🛍️</span> 第5天 - 5月5日：东京&返程</h2>
             
-            <span class="spot-icon">🛍️🎵🚃✈️</span>
             
             <div class="time-slot">
                 <strong>上午10:00-12:00</strong> - 🛍️ 池袋谷子店&唱片店
@@ -486,7 +432,7 @@
         </div>
         
         <div class="footer">
-            🧸 祝旅途愉快！🎋
+            祝旅途愉快！
         </div>
     </div>
 
