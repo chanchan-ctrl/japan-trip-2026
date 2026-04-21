@@ -5,125 +5,300 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日本旅行计划 - 2026年5月1-5日</title>
     <style>
-        body {
-            font-family: "Microsoft YaHei", Arial, sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap');
+        
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "M PLUS Rounded 1c", "Microsoft YaHei", Arial, sans-serif;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(144, 238, 144, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+            min-height: 100vh;
             padding: 20px;
-            background: linear-gradient(135deg, #e0f7e0 0%, #c8e6c9 100%);
             color: #2e7d32;
         }
+        
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 100, 0, 0.1);
-            border: 1px solid #c8e6c9;
+            background: linear-gradient(135deg, #ffffff 0%, #f1f8e9 100%);
+            padding: 0;
+            border-radius: 30px;
+            box-shadow: 
+                0 20px 60px rgba(46, 125, 50, 0.15),
+                0 0 0 8px rgba(255, 255, 255, 0.8),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+            border: 3px solid #81c784;
         }
-        h1 {
-            color: #2e7d32;
+        
+        .header {
+            background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+            padding: 40px 30px;
             text-align: center;
-            border-bottom: 3px solid #4caf50;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            font-size: 28px;
+            position: relative;
+            overflow: hidden;
         }
+        
+        .header::before {
+            content: "🌿";
+            position: absolute;
+            font-size: 80px;
+            left: 20px;
+            top: 10px;
+            opacity: 0.2;
+            transform: rotate(-20deg);
+        }
+        
+        .header::after {
+            content: "🍃";
+            position: absolute;
+            font-size: 60px;
+            right: 30px;
+            bottom: 10px;
+            opacity: 0.2;
+            transform: rotate(20deg);
+        }
+        
+        h1 {
+            color: white;
+            font-size: 36px;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::before {
+            content: "🧸";
+            margin-right: 15px;
+        }
+        
+        h1::after {
+            content: "🐰";
+            margin-left: 15px;
+        }
+        
+        .date-badge {
+            display: inline-block;
+            background: white;
+            color: #43a047;
+            padding: 8px 25px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .mascots {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 50px;
+            display: flex;
+            gap: 20px;
+            background: white;
+            padding: 10px 30px;
+            border-radius: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
         .tabs {
             display: flex;
+            padding: 30px 20px 10px;
+            gap: 10px;
             flex-wrap: wrap;
-            gap: 5px;
-            margin-bottom: 20px;
+            justify-content: center;
+            background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, transparent 100%);
         }
+        
         .tab-button {
-            flex: 1;
-            min-width: 120px;
-            padding: 12px 20px;
-            background-color: #e8f5e9;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
             color: #2e7d32;
-            border: 1px solid #c8e6c9;
-            border-radius: 8px 8px 0 0;
+            border: none;
+            border-radius: 20px;
             cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s;
-            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
         }
+        
         .tab-button:hover {
-            background-color: #c8e6c9;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(46, 125, 50, 0.3);
         }
+        
         .tab-button.active {
-            background-color: #4caf50;
+            background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
             color: white;
-            border-bottom: 1px solid white;
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(67, 160, 71, 0.4);
         }
+        
         .tab-content {
             display: none;
-            padding: 25px;
-            background-color: white;
-            border: 1px solid #c8e6c9;
-            border-top: none;
-            border-radius: 0 0 8px 8px;
+            padding: 30px;
             animation: fadeIn 0.5s;
         }
+        
         .tab-content.active {
             display: block;
         }
-        .spot-icon {
-            font-size: 48px;
-            display: block;
-            text-align: center;
-            margin: 15px 0;
-        }
-        .time-slot {
-            margin: 15px 0;
-            padding: 15px;
-            background-color: #f1f8e9;
-            border-left: 4px solid #66bb6a;
-            border-radius: 0 8px 8px 0;
-        }
-        .transport {
-            font-weight: bold;
-            color: #388e3c;
-        }
-        .note {
-            background-color: #e8f5e9;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 4px solid #81c784;
-        }
-        .highlight {
-            background-color: #c8e6c9;
-            padding: 3px 8px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+        
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
+        
         .day-title {
             color: #2e7d32;
-            border-left: 5px solid #4caf50;
-            padding-left: 15px;
-            margin-top: 0;
+            font-size: 24px;
+            border-left: 6px solid #66bb6a;
+            padding-left: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .day-icon {
+            font-size: 32px;
+        }
+        
+        .time-slot {
+            margin: 18px 0;
+            padding: 20px 25px;
+            background: linear-gradient(135deg, #ffffff 0%, #f1f8e9 100%);
+            border-left: 6px solid #81c784;
+            border-radius: 0 20px 20px 0;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.1);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .time-slot:hover {
+            transform: translateX(10px);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.15);
+        }
+        
+        .time-slot::before {
+            content: "🌱";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            opacity: 0.3;
+        }
+        
+        .time-slot strong {
+            color: #43a047;
+            font-size: 18px;
+            display: inline-block;
+            background: #c8e6c9;
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-right: 10px;
+        }
+        
+        .transport {
+            font-weight: 700;
+            color: #2e7d32;
+            background: #e8f5e9;
+            padding: 3px 10px;
+            border-radius: 10px;
+        }
+        
+        .note {
+            background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 30px;
+            border: 3px dashed #81c784;
+        }
+        
+        .note h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .note ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        
+        .note li {
+            padding: 8px 15px;
+            background: white;
+            border-radius: 15px;
+            font-size: 14px;
+            color: #388e3c;
+        }
+        
+        .spot-icon {
+            font-size: 60px;
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #81c784;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 24px; }
+            .tab-button { padding: 12px 20px; font-size: 14px; }
+            .time-slot { padding: 15px; }
+            .mascots { font-size: 30px; padding: 8px 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🌸 日本旅行计划 - 2026年5月1-5日 🌸</h1>
+        <div class="header">
+            <h1>日本旅行计划</h1>
+            <div class="date-badge">2026年5月1日 - 5月5日 🌸</div>
+            <div class="mascots">
+                🧸 🎋 🐰 🌊 🏔️
+            </div>
+        </div>
         
         <div class="tabs">
-            <button class="tab-button active" onclick="openTab('day1')">第1天<br>5月1日</button>
-            <button class="tab-button" onclick="openTab('day2')">第2天<br>5月2日</button>
-            <button class="tab-button" onclick="openTab('day3')">第3天<br>5月3日</button>
-            <button class="tab-button" onclick="openTab('day4')">第4天<br>5月4日</button>
-            <button class="tab-button" onclick="openTab('day5')">第5天<br>5月5日</button>
+            <button class="tab-button active" onclick="openTab('day1')">🌿 第1天<br>5月1日</button>
+            <button class="tab-button" onclick="openTab('day2')">🎋 第2天<br>5月2日</button>
+            <button class="tab-button" onclick="openTab('day3')">🏔️ 第3天<br>5月3日</button>
+            <button class="tab-button" onclick="openTab('day4')">🌊 第4天<br>5月4日</button>
+            <button class="tab-button" onclick="openTab('day5')">🛍️ 第5天<br>5月5日</button>
         </div>
 
         <div id="day1" class="tab-content active">
-            <h2 class="day-title">第1天 - 5月1日：京都三大寺院巡礼</h2>
+            <h2 class="day-title"><span class="day-icon">🏯</span> 第1天 - 5月1日：京都三大寺院巡礼</h2>
             
             <span class="spot-icon">🏯⛩️🎋</span>
             
@@ -165,16 +340,16 @@
         </div>
 
         <div id="day2" class="tab-content">
-            <h2 class="day-title">第2天 - 5月2日：岚山深度游</h2>
+            <h2 class="day-title"><span class="day-icon">🎋</span> 第2天 - 5月2日：岚山深度游</h2>
             
-            <span class="spot-icon">🎋🧸🏯</span>
+            <span class="spot-icon">🧸🎋🏯</span>
             
             <div class="time-slot">
-                <strong>上午9:20</strong> - <span class="transport">🚃 酒店步行至京都站→JR嵯峨野线→岚山站</span> - 约25分钟（含步行），240日元
+                <strong>上午9:20</strong> - <span class="transport">🚃 酒店步行至京都站→JR嵯峨野线→岚山站</span> - 约25分钟，240日元
             </div>
             
             <div class="time-slot">
-                <strong>上午10:00</strong> - 🧸 轻松熊茶屋 - Rilakkuma主题咖啡&商店
+                <strong>上午10:00-12:00</strong> - 🧸 轻松熊茶屋 - Rilakkuma主题咖啡&商店
             </div>
             
             <div class="time-slot">
@@ -199,7 +374,7 @@
         </div>
 
         <div id="day3" class="tab-content">
-            <h2 class="day-title">第3天 - 5月3日：京都→伊东半岛</h2>
+            <h2 class="day-title"><span class="day-icon">🏔️</span> 第3天 - 5月3日：京都→伊东半岛</h2>
             
             <span class="spot-icon">🚄🌊🏔️</span>
             
@@ -233,7 +408,7 @@
         </div>
 
         <div id="day4" class="tab-content">
-            <h2 class="day-title">第4天 - 5月4日：城崎海岸→东京</h2>
+            <h2 class="day-title"><span class="day-icon">🌊</span> 第4天 - 5月4日：城崎海岸→东京</h2>
             
             <span class="spot-icon">🌊🏨🍖📸</span>
             
@@ -275,7 +450,7 @@
         </div>
 
         <div id="day5" class="tab-content">
-            <h2 class="day-title">第5天 - 5月5日：东京&返程</h2>
+            <h2 class="day-title"><span class="day-icon">🛍️</span> 第5天 - 5月5日：东京&返程</h2>
             
             <span class="spot-icon">🛍️🎵🚃✈️</span>
             
@@ -311,6 +486,10 @@
                 <li>🚄 伊东→东京：约1小时35分钟，4,000日元</li>
                 <li>🚌 机场巴士：提前24小时预订可享1,900日元</li>
             </ul>
+        </div>
+        
+        <div class="footer">
+            🧸 祝旅途愉快！🎋
         </div>
     </div>
 
