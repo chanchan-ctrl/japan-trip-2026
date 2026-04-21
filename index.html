@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本旅行计划 - 2026年5月1-5日</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #e0f7e0 0%, #c8e6c9 100%);
+            color: #2e7d32;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 100, 0, 0.1);
+            border: 1px solid #c8e6c9;
+        }
+        h1 {
+            color: #2e7d32;
+            text-align: center;
+            border-bottom: 3px solid #4caf50;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 20px;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .tab-button:hover {
+            background-color: #c8e6c9;
+        }
+        .tab-button.active {
+            background-color: #4caf50;
+            color: white;
+            border-bottom: 1px solid white;
+        }
+        .tab-content {
+            display: none;
+            padding: 25px;
+            background-color: white;
+            border: 1px solid #c8e6c9;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            animation: fadeIn 0.5s;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .spot-icon {
+            font-size: 48px;
+            display: block;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .time-slot {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f1f8e9;
+            border-left: 4px solid #66bb6a;
+            border-radius: 0 8px 8px 0;
+        }
+        .transport {
+            font-weight: bold;
+            color: #388e3c;
+        }
+        .note {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #81c784;
+        }
+        .highlight {
+            background-color: #c8e6c9;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .day-title {
+            color: #2e7d32;
+            border-left: 5px solid #4caf50;
+            padding-left: 15px;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌸 日本旅行计划 - 2026年5月1-5日 🌸</h1>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('day1')">第1天<br>5月1日</button>
+            <button class="tab-button" onclick="openTab('day2')">第2天<br>5月2日</button>
+            <button class="tab-button" onclick="openTab('day3')">第3天<br>5月3日</button>
+            <button class="tab-button" onclick="openTab('day4')">第4天<br>5月4日</button>
+            <button class="tab-button" onclick="openTab('day5')">第5天<br>5月5日</button>
+        </div>
+
+        <div id="day1" class="tab-content active">
+            <h2 class="day-title">第1天 - 5月1日：京都三大寺院巡礼</h2>
+            
+            <span class="spot-icon">🏯⛩️🎋</span>
+            
+            <div class="time-slot">
+                <strong>上午5:45</strong> - ✈️ 抵达关西机场(KIX)
+            </div>
+            
+            <div class="time-slot">
+                <strong>上午7:00</strong> - <span class="transport">🚌 机场大巴→京都站八条口</span> - 约90分钟，3,150日元
+            </div>
+            
+            <div class="time-slot">
+                <strong>上午8:30-9:00</strong> - 🏨 前往酒店办理入住
+            </div>
+            
+            <div class="time-slot">
+                <strong>上午9:30</strong> - <span class="transport">🚃 叡山电车→三千院</span>
+            </div>
+            
+            <div class="time-slot">
+                <strong>上午10:30-12:00</strong> - 🏯 三千院 - 苔藓庭园与地藏菩萨
+            </div>
+            
+            <div class="time-slot">
+                <strong>中午12:00-1:00</strong> - 🍜 午餐
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午2:00-3:30</strong> - 🏯 琉璃光院 - 绝美苔藓庭园（需预约）
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午4:30-6:00</strong> - ⛩️ 贵船神社 - 川床料理与水占卜
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午6:00-7:30</strong> - <span class="transport">🚃 返回酒店</span>
+            </div>
+        </div>
+
+        <div id="day2" class="tab-content">
+            <h2 class="day-title">第2天 - 5月2日：岚山深度游</h2>
+            
+            <span class="spot-icon">🎋🧸🏯</span>
+            
+            <div class="time-slot">
+                <strong>上午9:20</strong> - <span class="transport">🚃 酒店步行至京都站→JR嵯峨野线→岚山站</span> - 约25分钟（含步行），240日元
+            </div>
+            
+            <div class="time-slot">
+                <strong>上午10:00</strong> - 🧸 轻松熊茶屋 - Rilakkuma主题咖啡&商店
+            </div>
+            
+            <div class="time-slot">
+                <strong>中午12:00-1:00</strong> - 🍜 午餐
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午1:00-2:30</strong> - 🏯 佑斋亭 - 池泉回游式庭园（需预约）
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午2:30-4:00</strong> - 🎋 竹林小径漫步
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午4:00-5:30</strong> - 🛍️ 岚山商业街购物
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午5:30-7:30</strong> - <span class="transport">🚃 返回京都</span>
+            </div>
+        </div>
+
+        <div id="day3" class="tab-content">
+            <h2 class="day-title">第3天 - 5月3日：京都→伊东半岛</h2>
+            
+            <span class="spot-icon">🚄🌊🏔️</span>
+            
+            <div class="time-slot">
+                <strong>上午11:00</strong> - <span class="transport">🚄 新干线京都→热海</span> - 约2小时，11,500日元
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午1:00</strong> - 🌊 热海换乘伊东急行 - 海上列车
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午2:00</strong> - 🏨 抵达伊东，入住龟屋乐酒店
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午2:30</strong> - <span class="transport">🚌 巴士→大室山</span> - 约40分钟，880日元
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午3:10-4:30</strong> - 🚠 大室山缆车 - 360度俯瞰半岛&富士山
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午4:30-5:10</strong> - <span class="transport">🚌 返回伊东</span>
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午5:30起</strong> - ♨️ 酒店温泉放松
+            </div>
+        </div>
+
+        <div id="day4" class="tab-content">
+            <h2 class="day-title">第4天 - 5月4日：城崎海岸→东京</h2>
+            
+            <span class="spot-icon">🌊🏨🍖📸</span>
+            
+            <div class="time-slot">
+                <strong>上午10:00</strong> - 🏨 酒店退房
+            </div>
+            
+            <div class="time-slot">
+                <strong>上午10:30</strong> - <span class="transport">🚃 JR伊东线→城崎海岸</span> - 约40分钟，350日元
+            </div>
+            
+            <div class="time-slot">
+                <strong>上午11:10-下午2:00</strong> - 🌊 城崎海岸观光 - 门胁吊桥、奇岩怪石
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午2:00-2:40</strong> - <span class="transport">🚃 返回伊东</span>
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午3:00</strong> - 🏨 取行李
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午3:30</strong> - <span class="transport">🚃 伊东→东京</span> - 约1小时35分钟，4,000日元
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午5:30</strong> - 🏨 抵达池袋，入住城市酒店
+            </div>
+            
+            <div class="time-slot">
+                <strong>晚上7:00</strong> - 🍖 TORAJI烤肉（惠比寿庵店）晚餐
+            </div>
+            
+            <div class="time-slot">
+                <strong>晚上8:30-9:30</strong> - 📸 竹芝站附近散步拍照
+            </div>
+        </div>
+
+        <div id="day5" class="tab-content">
+            <h2 class="day-title">第5天 - 5月5日：东京&返程</h2>
+            
+            <span class="spot-icon">🛍️🎵🚃✈️</span>
+            
+            <div class="time-slot">
+                <strong>上午10:00-12:00</strong> - 🛍️ 池袋谷子店&唱片店
+            </div>
+            
+            <div class="time-slot">
+                <strong>中午12:00-1:30</strong> - 🍜 午餐
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午1:30-5:00</strong> - 🛍️ 代代木&代官山逛街
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午5:30</strong> - 🏨 取行李后出发前往机场
+            </div>
+            
+            <div class="time-slot">
+                <strong>下午7:00</strong> - ✈️ 抵达机场，20:40航班
+            </div>
+        </div>
+
+        <div class="note">
+            <h3>📝 重要提示</h3>
+            <ul>
+                <li>🧸 轻松熊茶屋：无预约，早到排队，10:00-18:00</li>
+                <li>🏯 佑斋亭：需提前预约门票</li>
+                <li>🏯 琉璃光院：需提前预约，仅特定季节开放</li>
+                <li>🚠 大室山缆车：9:00-17:15运营</li>
+                <li>🌊 城崎海岸：从伊东站乘JR约40分钟</li>
+                <li>🚄 伊东→东京：约1小时35分钟，4,000日元</li>
+                <li>🚌 机场巴士：提前24小时预订可享1,900日元</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            const tabButtons = document.getElementsByClassName("tab-button");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
